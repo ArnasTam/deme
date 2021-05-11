@@ -1,0 +1,4 @@
+Dėmių skaičius: 6
+Didžiausia dėmė: 12
+Eilutė: 4
+Stulpelis: 9
