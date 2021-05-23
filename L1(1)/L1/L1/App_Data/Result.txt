@@ -1,4 +1,0 @@
-Dėmių skaičius: 55
-Didžiausia dėmė: 84
-Eilutė: 1
-Stulpelis: 53

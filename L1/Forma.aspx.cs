@@ -82,8 +82,8 @@ namespace L1
             Table1.Visible = true;
 
             // Exports the information to the files
-            //InOut.ExportStartingData(container);
-            //InOut.ExportResult(spotCount, spotBiggest, spotRow, spotColumn);
+            // InOut.ExportStartingData(container);
+            // InOut.ExportResult(spotCount, spotBiggest, spotRow, spotColumn);
         }
 
         // Button for erasing painted points
@@ -104,14 +104,7 @@ namespace L1
             Table1.Visible = true;
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        protected void TextBox1_TextChanged(object sender, EventArgs e) {}
+        protected void TextBox2_TextChanged(object sender, EventArgs e) {}
     }
 }

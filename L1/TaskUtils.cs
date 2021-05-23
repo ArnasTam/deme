@@ -50,6 +50,13 @@ namespace L1
                 cell.BackColor = Color.Black;
             }
 
+            // Paints all painted table cells Black
+            if (cell.Text == "#")
+            {
+                cell.BackColor = Color.Red;
+                cell.ForeColor = Color.Red;
+            }
+
             return cell;
         }
 
@@ -167,6 +174,8 @@ namespace L1
                     }
                 }
             }
+
+            this.PaintBiggestSpot(container, spotRow, spotColumn);
         }
 
         /// <summary>
@@ -191,6 +200,24 @@ namespace L1
                         container.Set_Bool(x + i, y + j, false);
                         // Checks other near points
                         CheckNearPoints(container, ref spotSize, x + i, y + j);
+                    }
+                }
+            }
+        }
+
+        public void PaintBiggestSpot(Container container, int x, int y) 
+        {
+            // Goes through (x-1)(x)(x+1) coordinates
+            for (int i = -1; i <= 1; i++)
+            {
+                // Goes through (y-1)(y)(y+1) coordinates
+                for (int j = -1; j <= 1; j++)
+                {
+                    // Checks wheteher the point is painted or not
+                    if (container.Get_Point(x + i, y + j) == "*")
+                    {
+                        container.Set_String(x + i, y + j, "#");
+                        PaintBiggestSpot(container, x + i, y + j);
                     }
                 }
             }
